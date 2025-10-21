@@ -1,0 +1,391 @@
+body {
+    background: linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(30, 41, 59, 0.92) 50%,
+            rgba(15, 23, 42, 0.95) 100%
+        ),
+        url("/images/bg-dashboard.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.d-flex.justify-content-between.align-items-center {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.d-flex.justify-content-between h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.d-flex.justify-content-between .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
+}
+
+/* Button kembali - matching dashboard button style */
+.btn-outline-primary,
+.btn-sm.btn-outline-primary {
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid #3b82f6;
+    color: #60a5fa;
+    padding: 0.6rem 1.25rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline-primary::before,
+.btn-sm.btn-outline-primary::before {
+    content: "← ";
+    margin-right: 0.25rem;
+}
+
+.btn-outline-primary::after,
+.btn-sm.btn-outline-primary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-outline-primary:hover::after,
+.btn-sm.btn-outline-primary:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-outline-primary:hover,
+.btn-sm.btn-outline-primary:hover {
+    background: #3b82f6;
+    color: #fff;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Table container dengan animasi - DARK BACKGROUND */
+.table-responsive {
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    overflow: hidden;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Table styling - FORCE DARK */
+.table {
+    color: #fff !important;
+    margin-bottom: 0;
+    background-color: transparent !important;
+}
+
+/* Override Bootstrap table backgrounds */
+.table,
+.table > :not(caption) > * > * {
+    background-color: transparent !important;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table thead tr {
+    background: rgba(30, 41, 59, 0.8) !important;
+    backdrop-filter: blur(10px);
+}
+
+.table thead th {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.25rem 1rem;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.5) !important;
+    position: relative;
+}
+
+.table thead th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    transition: width 0.3s ease;
+}
+
+.table thead th:hover::after {
+    width: 100%;
+}
+
+/* Table body rows dengan hover effect - DARK ROWS */
+.table tbody tr {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2) !important;
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-out backwards;
+}
+
+.table tbody tr td {
+    background-color: transparent !important;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Stagger animation untuk rows */
+.table tbody tr:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.table tbody tr:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.table tbody tr:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.table tbody tr:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.table tbody tr:nth-child(5) {
+    animation-delay: 0.7s;
+}
+.table tbody tr:nth-child(n + 6) {
+    animation-delay: 0.8s;
+}
+
+.table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.2) !important;
+    transform: scale(1.01);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+}
+
+/* ID column styling */
+.table tbody td:first-child {
+    font-weight: 700;
+    color: #60a5fa !important;
+    font-size: 1.1rem;
+}
+
+/* Poster image dengan hover effect */
+.table tbody td img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.table tbody tr:hover td img {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Title column */
+.table tbody td strong {
+    color: #fff !important;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.table tbody td .small {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Genre badge */
+.table tbody td:nth-child(4) {
+    font-weight: 600;
+    color: #60a5fa !important;
+}
+
+/* Year styling */
+.table tbody td:nth-child(5) {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Price column dengan highlight */
+.table tbody td:nth-child(6) {
+    font-weight: 700;
+    color: #10b981 !important;
+    font-size: 1.05rem;
+    background: rgba(16, 185, 129, 0.15) !important;
+    border-radius: 6px;
+}
+
+/* Status column dengan badge */
+.table tbody td:nth-child(7) {
+    font-weight: 600;
+    color: #10b981 !important;
+}
+
+.table tbody td:nth-child(7)::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+/* Scrollbar untuk table */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* Stripe effect untuk table - DARKER STRIPES */
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+.table-striped tbody tr:nth-of-type(even),
+.table-striped > tbody > tr:nth-of-type(even) > * {
+    background-color: rgba(30, 41, 59, 0.4) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        padding: 1rem;
+    }
+
+    .table thead th {
+        padding: 1rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .table tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .table tbody td img {
+        width: 60px !important;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .d-flex.justify-content-between h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-outline-primary,
+    .btn-sm.btn-outline-primary {
+        width: 100%;
+    }
+}
+
+/* Empty state styling */
+.table tbody:empty::after {
+    content: "📽️ Tidak ada data film";
+    display: block;
+    text-align: center;
+    padding: 3rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+}

@@ -1,0 +1,375 @@
+body:has(.row.justify-content-center) {
+    background: linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(30, 41, 59, 0.92) 50%,
+            rgba(15, 23, 42, 0.95) 100%
+        ),
+        url("/images/bg-login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Main content wrapper untuk centering */
+.content-wrapper,
+main,
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container login dengan animasi */
+.row.justify-content-center {
+    animation: zoomIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem 0;
+    margin: 0 auto;
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Card login dengan efek premium */
+.row.justify-content-center .card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 130, 246, 0.2),
+        inset 0 0 60px rgba(59, 130, 246, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Glow effect di card */
+.row.justify-content-center .card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(59, 130, 246, 0.1) 0%,
+        transparent 70%
+    );
+    animation: rotateGlow 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.row.justify-content-center .card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 60px rgba(59, 130, 246, 0.4),
+        inset 0 0 80px rgba(59, 130, 246, 0.1);
+}
+
+/* Card title dengan efek cahaya */
+.row.justify-content-center .card-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    animation: slideInDown 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row.justify-content-center .card-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: expandLine 1s ease-out 0.5s backwards;
+}
+
+@keyframes expandLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+/* Form styling */
+.row.justify-content-center form {
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* Label styling */
+.row.justify-content-center .form-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Input fields dengan efek fokus */
+.row.justify-content-center .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.875rem 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.row.justify-content-center .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
+.row.justify-content-center .form-control:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2),
+        0 5px 20px rgba(59, 130, 246, 0.3);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.row.justify-content-center .form-control:focus + .form-label,
+.row.justify-content-center .mb-3:focus-within .form-label {
+    color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+/* Input animation saat load */
+.row.justify-content-center .mb-3:nth-child(1) {
+    animation: slideInLeft 0.6s ease-out 0.5s backwards;
+}
+
+.row.justify-content-center .mb-3:nth-child(2) {
+    animation: slideInLeft 0.6s ease-out 0.6s backwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Button login dengan efek premium */
+.row.justify-content-center .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+    animation: slideInUp 0.6s ease-out 0.7s backwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shimmer effect pada button */
+.row.justify-content-center .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.row.justify-content-center .btn-primary:hover::before {
+    left: 100%;
+}
+
+.row.justify-content-center .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6),
+        0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.row.justify-content-center .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Loading animation saat submit */
+.row.justify-content-center .btn-primary:active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row.justify-content-center .card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .row.justify-content-center .card-title {
+        font-size: 1.6rem;
+    }
+
+    .row.justify-content-center .btn-primary {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+}
+
+/* Particles background effect (optional) */
+.row.justify-content-center::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+            circle at 20% 30%,
+            rgba(59, 130, 246, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(59, 130, 246, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 40% 80%,
+            rgba(59, 130, 246, 0.1) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(59, 130, 246, 0.1) 1px,
+            transparent 1px
+        );
+    background-size: 200px 200px, 300px 300px, 250px 250px, 280px 280px;
+    animation: floatParticles 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes floatParticles {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(20px, -20px);
+    }
+    50% {
+        transform: translate(-15px, 15px);
+    }
+    75% {
+        transform: translate(15px, -10px);
+    }
+}
+
+/* Auto-fill styling untuk browser */
+.row.justify-content-center .form-control:-webkit-autofill,
+.row.justify-content-center .form-control:-webkit-autofill:hover,
+.row.justify-content-center .form-control:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 1000px rgba(59, 130, 246, 0.1) inset;
+    transition: background-color 5000s ease-in-out 0s;
+    border-color: #3b82f6;
+}
