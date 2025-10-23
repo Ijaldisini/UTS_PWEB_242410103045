@@ -86,6 +86,116 @@ class PageController extends Controller
             'status' => 'Available',
             'description' => 'Venom: The Last Dance adalah sebuah film pahlawan super Amerika yang berdasarkan karakter Marvel Comics Venom, diproduksi oleh Columbia Pictures dan Marvel Entertainment, serta didistribusikan oleh Sony Pictures Releasing. Film ini merupakan sekuel dari Venom: Let There Be Carnage (2021) dan film ketiga dalam Sony\'s Spider-Man Universe.',
             'image' => 'images/venom-the-last-dance.jpg'
+        ],
+        [
+            'id' => 9,
+            'title' => 'The Avengers',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2012,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Nick Fury (Samuel L. Jackson), direktur S.H.I.E.L.D., merekrut Tony Stark (Robert Downey Jr.), Steve Rogers (Chris Evans), Bruce Banner (Mark Ruffalo), Thor (Chris Hemsworth), Natasha Romanoff (Scarlett Johansson), dan Clint Barton (Jeremy Renner) untuk membentuk tim superhero yang dikenal sebagai The Avengers guna menghentikan Loki (Tom Hiddleston) yang berusaha menguasai Bumi dengan pasukan aliennya.',
+            'image' => 'images/the-avengers.jpg'
+        ],
+        [
+            'id' => 10,
+            'title' => 'The Avengers: Age of Ultron',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2015,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Setelah mengalahkan Loki dan pasukannya, The Avengers harus bersatu kembali untuk menghadapi ancaman baru yang muncul dari ciptaan Tony Stark, Ultron (James Spader), sebuah kecerdasan buatan yang berusaha memusnahkan umat manusia.',
+            'image' => 'images/the-avengers-age-of-ultron.jpg'
+        ],
+        [
+            'id' => 11,
+            'title' => 'The Avengers: Infinity War',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2018,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'The Avengers bergabung dengan Guardians of the Galaxy untuk menghadapi Thanos (Josh Brolin), seorang tiran intergalaksi yang berusaha mengumpulkan semua Infinity Stones guna mencapai kekuatan absolut dan menghapus setengah kehidupan di alam semesta.',
+            'image' => 'images/the-avengers-infinity-war.jpg'
+        ],
+        [
+            'id' => 12,
+            'title' => 'The Avengers: Endgame',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2019,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Setelah kehancuran yang disebabkan oleh Thanos, para pahlawan yang tersisa berusaha untuk membalikkan kerusakan tersebut dengan melakukan perjalanan waktu guna mengumpulkan Infinity Stones sebelum Thanos dapat menggunakannya lagi.',
+            'image' => 'images/the-avengers-endgame.jpg'
+        ],
+        [
+            'id' => 13,
+            'title' => 'Iron Man',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2008,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Setelah diculik oleh teroris, miliarder playboy Tony Stark (Robert Downey Jr.) membangun sebuah baju zirah berteknologi tinggi untuk melarikan diri. Kembali ke Amerika Serikat, ia memutuskan untuk menggunakan teknologi tersebut untuk melawan kejahatan sebagai Iron Man.',
+            'image' => 'images/iron-man-1.jpg'
+        ],
+        [
+            'id' => 14,
+            'title' => 'Iron Man 2',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2010,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Tony Stark (Robert Downey Jr.) menghadapi tantangan baru ketika ia harus melawan Ivan Vanko (Mickey Rourke), seorang penjahat yang memiliki teknologi serupa dengan Iron Man. Sementara itu, Stark juga harus menghadapi tekanan dari pemerintah yang ingin menguasai teknologi Iron Man.',
+            'image' => 'images/iron-man-2.jpg'
+        ],
+        [
+            'id' => 15,
+            'title' => 'Iron Man 3',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2013,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Tony Stark (Robert Downey Jr.) menghadapi ancaman baru ketika seorang teroris misterius yang dikenal sebagai Mandarin (Ben Kingsley) menyerang kehidupannya. Dalam menghadapi krisis ini, Stark harus menemukan cara untuk melindungi orang-orang terkasihnya dan mengatasi ketakutannya.',
+            'image' => 'images/iron-man-3.jpg'
+        ],
+        [
+            'id' => 16,
+            'title' => 'Black Panther',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2018,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Setelah kematian ayahnya, T\'Challa (Chadwick Boseman) kembali ke Wakanda untuk mengambil alih tahta sebagai raja dan Black Panther. Namun, ia harus menghadapi tantangan dari musuh lama dan baru yang mengancam keselamatan kerajaannya.',
+            'image' => 'images/black-panther.jpg'
+        ],
+        [
+            'id' => 17,
+            'title' => 'Black Panther: Wakanda Forever',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2022,
+            'price' => 'Rp 25.000',
+            'status' => 'Available',
+            'description' => 'Setelah kematian T\'Challa, kerajaan Wakanda menghadapi ancaman baru dari musuh yang ingin mengambil alih sumber daya vibranium mereka. Para pemimpin Wakanda harus bersatu untuk melindungi tanah air mereka dan menghormati warisan Black Panther.',
+            'image' => 'images/black-panther-wakanda-forever.jpg'
+        ],
+        [
+            'id' => 18,
+            'title' => 'Doctor Strange',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2016,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Setelah kecelakaan mobil yang menghancurkan tangannya, ahli bedah saraf Dr. Stephen Strange (Benedict Cumberbatch) mencari penyembuhan di Nepal dan menemukan dunia sihir dan dimensi alternatif. Dengan bantuan mentor barunya, The Ancient One (Tilda Swinton), Strange belajar untuk menguasai seni mistis dan melindungi bumi dari ancaman magis.',
+            'image' => 'images/doctor-strange.jpg'
+        ],
+        [
+            'id' => 19,
+            'title' => 'Doctor Strange in the Multiverse of Madness',
+            'genre' => 'action, adventure, fiction',
+            'year' => 2022,
+            'price' => 'Rp 20.000',
+            'status' => 'Available',
+            'description' => 'Dr. Stephen Strange (Benedict Cumberbatch) menghadapi konsekuensi dari membuka multiverse dan harus berhadapan dengan ancaman baru yang mengancam realitas yang dikenal. Dengan bantuan Wanda Maximoff (Elizabeth Olsen), Strange harus menavigasi melalui berbagai dimensi untuk menyelamatkan dunia.',
+            'image' => 'images/doctor-strange-in-the-multiverse-of-madness.jpg'
         ]
     ];
 
