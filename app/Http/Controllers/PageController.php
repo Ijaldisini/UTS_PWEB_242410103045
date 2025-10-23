@@ -208,14 +208,14 @@ class PageController extends Controller
     // Proses login
     public function doLogin(Request $req)
     {
-        $username = $req->input('username', 'Tamu');
+        $username = $req->input('username');
         return redirect()->route('dashboard', ['username' => $username]);
     }
 
     // Dashboard
     public function dashboard(Request $req)
     {
-        $username = $req->query('username', 'Tamu');
+        $username = $req->query('username');
         $featured = $this->films;
 
         return view('dashboard', [
@@ -238,11 +238,10 @@ class PageController extends Controller
     // Profil pengguna
     public function profile(Request $req)
     {
-        $username = $req->query('username', 'Tamu');
+        $username = $req->query('username');
         $profile = [
             'username' => $username,
             'email' => strtolower($username) . '*********@gmail.com',
-            'member_since' => '2024-01-15',
         ];
 
         return view('profile', compact('profile'));
