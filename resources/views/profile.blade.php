@@ -17,8 +17,8 @@
                 <span>{{ $profile['username'] }}</span>
             </li>
             <li>
-                <strong>Nama Lengkap:</strong>
-                <span>{{ $profile['fullname'] }}</span>
+                <strong>Keanggotaan:</strong>
+                <span>Fans marvel dari baru lahir</span>
             </li>
             <li>
                 <strong>Email:</strong>

@@ -241,8 +241,7 @@ class PageController extends Controller
         $username = $req->query('username', 'Tamu');
         $profile = [
             'username' => $username,
-            'fullname' => $username === 'Tamu' ? 'Pengguna Tamu' : ucfirst($username),
-            'email' => strtolower($username) . '@example.com',
+            'email' => strtolower($username) . '*********@gmail.com',
             'member_since' => '2024-01-15',
         ];
 
